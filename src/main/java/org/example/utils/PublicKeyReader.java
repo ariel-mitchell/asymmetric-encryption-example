@@ -1,4 +1,4 @@
-package org.example.service;
+package org.example.utils;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -8,7 +8,7 @@ import java.security.spec.RSAPublicKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.Base64;
 
-import static org.example.service.WindowsSshKeyParser.createKeySpecFromSshRsaPublicKey;
+import static org.example.utils.WindowsSshKeyParser.createKeySpecFromSshRsaPublicKey;
 
 public class PublicKeyReader {
 

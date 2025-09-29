@@ -6,8 +6,8 @@ import java.util.Scanner;
 import javax.crypto.Cipher;
 import javax.xml.bind.DatatypeConverter;
 
-import static org.example.service.PrivateKeyReader.readPrivateKey;
-import static org.example.service.PublicKeyReader.readPublicKey;
+import static org.example.utils.PrivateKeyReader.readPrivateKey;
+import static org.example.utils.PublicKeyReader.readPublicKey;
 
 public class AsymmetricEncryptionExample {
     public static void main(String[] args) throws Exception {

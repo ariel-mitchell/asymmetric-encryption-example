@@ -1,4 +1,4 @@
-package org.example.service;
+package org.example.utils;
 
 import java.io.IOException;
 import java.nio.file.Files;
