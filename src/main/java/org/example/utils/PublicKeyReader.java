@@ -8,7 +8,7 @@ import java.security.spec.RSAPublicKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.Base64;
 
-import static org.example.utils.WindowsSshKeyParser.createKeySpecFromSshRsaPublicKey;
+import static org.example.utils.SshKeyParser.createKeySpecFromOpenSshPublicKey;
 
 public class PublicKeyReader {
 
@@ -32,9 +32,9 @@ public class PublicKeyReader {
             X509EncodedKeySpec keySpec = new X509EncodedKeySpec(decodedKey);
             return keyFactory.generatePublic(keySpec);
         } else if (filePath.endsWith(".pub")) {
-            // Use WindowsSshKeyParser class to parse data and create RSAPublicKeySpec
+            // Use SshKeyParser to parse data and create RSAPublicKeySpec
             String pubContent = new String(keyBytes);
-            RSAPublicKeySpec keySpec = createKeySpecFromSshRsaPublicKey(pubContent);
+            RSAPublicKeySpec keySpec = createKeySpecFromOpenSshPublicKey(pubContent);
             return keyFactory.generatePublic(keySpec);
         } else {
             X509EncodedKeySpec keySpec = new X509EncodedKeySpec(keyBytes);

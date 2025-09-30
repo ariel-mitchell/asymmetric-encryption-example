@@ -5,8 +5,8 @@ import java.nio.ByteBuffer;
 import java.security.spec.RSAPublicKeySpec;
 import java.util.Base64;
 
-public class WindowsSshKeyParser {
-    public static RSAPublicKeySpec createKeySpecFromSshRsaPublicKey(String sshPublicKeyString) throws Exception {
+public class SshKeyParser {
+    public static RSAPublicKeySpec createKeySpecFromOpenSshPublicKey(String sshPublicKeyString) throws Exception {
         // 1. Extract Base64 (assuming standard OpenSSH format)
         String[] parts = sshPublicKeyString.split(" ");
         String base64Key = parts[1];
