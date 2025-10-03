@@ -16,6 +16,7 @@ public class PrivateKeyReader {
             throws IOException, NoSuchAlgorithmException, InvalidKeySpecException {
 
         // 1. Read the key data from the file
+        filePath = filePath.replaceAll("[\"']", "");
         byte[] keyBytes = Files.readAllBytes(Paths.get(filePath));
 
         // 2. Remove PEM headers and decode Base64

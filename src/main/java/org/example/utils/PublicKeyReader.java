@@ -14,6 +14,7 @@ public class PublicKeyReader {
 
     public static PublicKey readPublicKey(String filePath) throws Exception {
 
+        filePath = filePath.replaceAll("[\"']", "");
         byte[] keyBytes = Files.readAllBytes(Paths.get(filePath));
 
         // KeyFactory can handle multiple spec types
